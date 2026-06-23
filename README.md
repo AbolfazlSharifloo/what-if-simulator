@@ -1,9 +1,9 @@
 # What If? Simulator
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://abolfazlsharifloo.github.io/what-if-simulator/)
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://sharifloo-net.github.io/what-if-simulator/)
 
 ## Overview
-An App that explores hypothetical "What If?" scenarios and their structured consequences of six key categories: Daily Life, Economy, Technology, Social Structure, Advantages, and Problems. The application allows users to explore preloaded scenarios, create custom ones, and even generate new scenarios using AI.
+A Progressive Web App (PWA) that explores hypothetical "What If?" scenarios and their structured consequences of six key categories: Daily Life, Economy, Technology, Social Structure, Advantages, and Problems. The application allows users to explore preloaded scenarios, create custom ones, and even generate new scenarios using AI.
 
 ## 🚀 Features
 
@@ -15,10 +15,11 @@ An App that explores hypothetical "What If?" scenarios and their structured cons
 - **Data Management**: Import/export scenarios as JSON files
 - **Search & Filter**: Quickly find scenarios by title or content
 - **Keyboard Navigation**: Intuitive controls (arrows to navigate, 'F' to favorite)
-- **PWA Support For Web Usage**: Full PWA functionality with service worker caching
+- **Offline Support**: Full PWA functionality with service worker caching
 - **Responsive Design**: Optimized for both desktop and mobile devices
 
 ### Technical Highlights
+- **Progressive Web App**: Installable on devices with offline support
 - **Zero Dependencies**: Built with vanilla JavaScript, HTML5, and CSS3
 - **Lightweight**: Fast loading with minimal resource usage
 - **Data Persistence**: All scenarios saved in browser's localStorage
@@ -33,7 +34,8 @@ what-if-sim/
 ├── app.js              # Core application logic and functionality
 ├── service-worker.js   # Service worker for offline capabilities
 ├── manifest.json       # PWA configuration
-└── icons/              # App icons for various platforms
+├── icons/              # App icons for various platforms
+└── README.md           # This documentation
 ```
 
 ## 🛠️ Installation & Setup
@@ -48,8 +50,17 @@ what-if-sim/
      ```
      Then visit `http://localhost:5000`
 
-### APK Build (Android)
-Run ```npx tauri android build --debug```
+### PWA Installation
+1. Deploy the app to a web server (HTTPS required for service worker)
+2. Visit the deployed URL in a modern browser
+3. Click the install prompt (browser-dependent) or use the browser's "Add to Home Screen" option
+
+### APK Generation (Android)
+1. Deploy to an HTTPS server
+2. Visit [PWABuilder](https://www.pwabuilder.com/)
+3. Enter your deployed URL
+4. Click "Build My PWA" and select Android
+5. Download and sign the generated APK
 
 ## 🔍 Usage Guide
 
@@ -88,6 +99,19 @@ Run ```npx tauri android build --debug```
 - AI API key (if provided) is stored with the key: `whatif-ai-apikey-v1`
 - Favorites and quick access preferences are stored in localStorage
 
+## 🌐 Browser Support
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile Safari (iOS 13+)
+- Chrome for Android
 
 ## 📝 License
 This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📬 Contact
+For feature requests or bug reports, please open an issue on the repository.
